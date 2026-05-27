@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Header</title>
+  <style>
+    :root {
+      --header-bg: #d7bfff;
+      --title-color: #4e3fb7;
+    }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--header-bg);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .header {
+      height: 100%;
+      background: var(--header-bg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      box-sizing: border-box;
+    }
+
+    .header img {
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .left-image {
+      width: 82px;
+      height: 82px;
+      object-fit: contain;
+    }
+
+    .right-image {
+      width: 66px;
+      height: 66px;
+      object-fit: contain;
+    }
+
+    .title {
+      margin: 0;
+      color: var(--title-color);
+      font-size: clamp(2.4rem, 4vw, 3.7rem);
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      white-space: nowrap;
+      line-height: 1;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    @media (max-width: 700px) {
+      .header {
+        padding: 0 12px;
+        gap: 12px;
+      }
+
+      .left-image {
+        width: 58px;
+        height: 58px;
+      }
+
+      .right-image {
+        width: 48px;
+        height: 48px;
+      }
+
+      .title {
+        font-size: clamp(1.5rem, 6vw, 2.3rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" aria-label="Site header">
+    <img class="left-image" src="headerLeftImage.png" alt="Crime and Chaos logo">
+    <img class="center-image" src="headerCenterImage.png" alt="Crime and Chaos title logo">
+    <img class="right-image" src="HeaderRightImage.png" alt="Basketball icon">
+  </header>
+</body>
+</html>
